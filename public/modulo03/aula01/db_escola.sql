@@ -21,3 +21,5 @@ VALUES (
     'alessandro@email.com',
     '12312312312'
   );
+-- selecionar dados
+SELECT * FROM tb_professor;
