@@ -4,6 +4,7 @@ CREATE DATABASE db_escola;
 USE db_escola;
 -- Criar Tabela
 CREATE TABLE tb_professor (
+  id INTEGER(11) PRIMARY KEY AUTO_INCREMENT,
   nome VARCHAR(100) NOT NULL,
   cpf CHAR(11) UNIQUE NOT NULL,
   email VARCHAR(255) UNIQUE NOT NULL
