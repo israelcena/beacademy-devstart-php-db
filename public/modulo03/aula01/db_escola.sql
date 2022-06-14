@@ -32,3 +32,6 @@ SELECT *
 FROM tb_professor;
 -- deletar tabela
 DROP TABLE tb_professor;
+-- modificar tabela
+ALTER TABLE db_escola.tb_aluno
+MODIFY COLUMN email varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NOT NULL;
