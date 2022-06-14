@@ -15,6 +15,15 @@ CREATE TABLE tb_aluno (
   email VARCHAR(255),
   matricula INTEGER(10)
 );
+CREATE TABLE tb_curso (
+  id INTEGER(11) PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(100) NOT NULL,
+  duracao TIMESTAMP NOT NULL
+);
+CREATE TABLE tb_disciplina (
+  id INTEGER(11) PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(100) NOT NULL,
+);
 -- inserir dados
 INSERT INTO tb_professor (nome, email, cpf)
 VALUES (
