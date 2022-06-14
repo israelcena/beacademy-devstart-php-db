@@ -5,8 +5,8 @@ USE db_escola;
 -- Criar Tabela
 CREATE TABLE tb_professor (
   nome VARCHAR(100) NOT NULL,
-  cpf CHAR(11) NOT NULL,
-  email VARCHAR(255)
+  cpf CHAR(11) UNIQUE NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL
 );
 CREATE TABLE tb_aluno (
   nome VARCHAR(100) NOT NULL,
