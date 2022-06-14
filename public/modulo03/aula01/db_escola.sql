@@ -21,5 +21,12 @@ VALUES (
     'alessandro@email.com',
     '12312312312'
   );
+INSERT INTO tb_professor (nome, email, cpf)
+VALUES (
+    'bruno',
+    'bruno@email.com',
+    '43212312312'
+  );
 -- selecionar dados
-SELECT * FROM tb_professor;
+SELECT *
+FROM tb_professor;
