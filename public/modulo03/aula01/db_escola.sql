@@ -30,3 +30,5 @@ VALUES (
 -- selecionar dados
 SELECT *
 FROM tb_professor;
+-- deletar tabela
+DROP TABLE tb_professor;
