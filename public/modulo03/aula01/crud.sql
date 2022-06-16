@@ -27,8 +27,10 @@ VALUES(
 DELETE FROM tb_professor
 WHERE id = '1';
 -- deletar 1 registro por email
-DELETE FROM tb_professor123444114 -- update infos de 1 registro 
-  -- (pode ser por cpf ou id, se não for colococa o WHERE, modificará todos os elementos da tabela)
+DELETE FROM tb_professor
+WHERE email = 'usuario@email.com';
+-- update infos de 1 registro 
+-- (pode ser por cpf ou id, se não for colococa o WHERE, modificará todos os elementos da tabela)
 UPDATE tb_professor
 SET nome = "luiza da caucaia"
 WHERE cpf = '123444114';
