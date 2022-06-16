@@ -50,3 +50,5 @@ SELECT nome,
   cpf
 FROM tb_professor
 WHERE id > '5';
+-- see table content
+DESC tb_professor;
