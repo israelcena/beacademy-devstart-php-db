@@ -8,7 +8,12 @@ CREATE TABLE tb_category (
 CREATE TABLE tb_product (
   id INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   name VARCHAR(30) NOT NULL,
-  description VARCHAR(100) NOT NULL
+  description VARCHAR(100) NOT NULL,
+  photo VARCHAR(255) NOT NULL,
+  value FLOAT(5,2) NOT NULL,
+  quantity INTEGER(100)  NOT NULL,
+  created_at DATETIME NOT NULL,
+  categoria_id INT(11) NOT NULL
 );
 INSERT INTO tb_category (name, description)
 VALUES(
@@ -23,3 +28,5 @@ VALUES(
     'acessorios',
     'acessorios de tecnologia e acessorios em geral'
   );
+INSERT INTO tb_product (name, description) 
+VALUES ('');
