@@ -5,6 +5,11 @@ CREATE TABLE tb_category (
   name VARCHAR(30) NOT NULL,
   description VARCHAR(100) NOT NULL
 );
+CREATE TABLE tb_product (
+  id INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(30) NOT NULL,
+  description VARCHAR(100) NOT NULL
+);
 INSERT INTO tb_category (name, description)
 VALUES(
     'informática',
