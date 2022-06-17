@@ -8,7 +8,10 @@ class CategoryController extends AbsController
 {
   public function listAction(): void
   {
-    parent::render('category/list');
+    $con = Connection::getConnetion();
+    $data = $con->prepare('SELECT * FROM tb_category');
+    $data->execute();
+    parent::render('category/list', $data);
   }
   public function addAction(): void
   {
