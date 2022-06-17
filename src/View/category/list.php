@@ -1,6 +1,5 @@
 <div class="container">
-  <h1>Listar Categorias</h1>
-
+  <h1 class="h1 my-4">Todas Categorias</h1>
   <table class="table table-hover table-striped">
     <thead class="table-dark">
       <tr>
@@ -10,7 +9,6 @@
         <th>Ações</th>
       </tr>
     </thead>
-
     <tbody>
       <?php
       $categories = $data->fetchAll(\PDO::FETCH_ASSOC);
