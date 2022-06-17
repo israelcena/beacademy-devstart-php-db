@@ -8,8 +8,9 @@ abstract class AbsController
 {
   public function render(string $viewName, $data = null): void
   {
-    include "/application/src/View/bootstrap.php";
-    include "/application/src/View/navbar.php";
+    include "/application/src/View/_partials/head.php";
+    include "/application/src/View/_partials/navbar.php";
     include "/application/src/View/{$viewName}.php";
+    include "/application/src/View/_partials/footer.php";
   }
 }
