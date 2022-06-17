@@ -21,8 +21,8 @@
           . "<td>{$name}</td>"
           . "<td>{$description}</td>"
           . "<td>
+        <a class='btn btn-sm btn-primary' href='/categorias/editar?id=$id'>Editar<a>
         <a class='btn btn-sm btn-danger' href='/categorias/deletar?id=$id'>Excluir<a>
-        <a class='btn btn-sm btn-info' href='/categorias/editar?id=$id'>Editar<a>
         </td>"
           . "</tr>";
       }
