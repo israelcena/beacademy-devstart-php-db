@@ -13,9 +13,9 @@ services:
             - '.:/application'
         environment:
             - MYSQL_ROOT_PASSWORD=root
-            - MYSQL_DATABASE=ecommerce
-            - MYSQL_USER=user
-            - MYSQL_PASSWORD=user
+            - MYSQL_DATABASE=db_store
+            - MYSQL_USER=root
+            - MYSQL_PASSWORD=root
         ports:
             - '8003:3306'
 
