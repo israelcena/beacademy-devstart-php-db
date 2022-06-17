@@ -29,7 +29,12 @@ class CategoryController extends AbsController
   }
   public function removeAction(): void
   {
-    parent::render('category/remove');
+    $con = Connection::getConnetion();
+    $data = $con->prepare('DELETE FROM tb_category WHERE id = :id');
+    $data->bindValue(':id', $_GET['id']);
+    $data->execute();
+    header('Location: /categorias');
+    // parent::render('category/remove');
   }
   public function editAction(): void
   {
