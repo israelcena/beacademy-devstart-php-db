@@ -11,7 +11,7 @@ abstract class Connection
   public static function getConnetion(): PDO
   {
     $dbInfo = [
-      'host' => '10.0.10.176',
+      'host' => '10.0.10.154',
       'port' => '8003',
       'dbname' => 'db_store',
       'username' => 'root',
