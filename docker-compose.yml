@@ -19,9 +19,6 @@ services:
         ports:
             - '8003:3306'
 
-    elasticsearch:
-        image: 'elasticsearch:6.5.4'
-
     clickhouse:
         image: 'yandex/clickhouse-server:latest'
 
