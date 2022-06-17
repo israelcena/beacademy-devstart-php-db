@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Connection\Connection;
+
 class CategoryController extends AbsController
 {
   public function listAction(): void
@@ -15,6 +17,14 @@ class CategoryController extends AbsController
   }
   public function addAction(): void
   {
+    if ($_POST) {
+      $con = Connection::getConnetion();
+      $data = $con->prepare('INSERT INTO tb_category (name, description) VALUES (:name, :description)');
+      $data->bindValue(':name', $_POST['name']);
+      $data->bindValue(':description', $_POST['description']);
+      $data->execute();
+      header('Location: /categorias');
+    }
     parent::render('category/add');
   }
   public function removeAction(): void
