@@ -13,6 +13,7 @@ CREATE TABLE tb_product (
   value FLOAT(5,2) NOT NULL,
   quantity INTEGER(100)  NOT NULL,
   created_at DATETIME NOT NULL,
+  star BOOLEAN,
   category_id INT(11) NOT NULL
 );
 INSERT INTO tb_category (name, description)
