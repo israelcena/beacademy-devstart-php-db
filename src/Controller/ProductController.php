@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Connection\Connection;
+use Dompdf\Dompdf;
 
 class ProductController extends AbsController
 {
@@ -70,5 +71,41 @@ class ProductController extends AbsController
       $query->execute();
       echo '<script> location.replace("/produtos"); </script>';
     }
+  }
+
+  public function reportAction(): void
+  {
+    $con = Connection::getConnetion();
+    $data = $con->prepare('SELECT name, quantity FROM tb_product');
+    $data->execute();
+    $data = $data->fetchAll(\PDO::FETCH_ASSOC);
+
+    $content = '';
+
+    foreach ($data as $product) {
+      $content .= "<tr>
+        <td>{$product['name']}</td>
+        <td>{$product['quantity']}</td>
+      </tr>";
+    }
+
+    $html = "
+    <h1>Relatório de Produtos </h1>
+    <table border='1' width='100%' class='table table-striped'>
+      <thead>
+        <tr>
+          <th scope='col'>Nome</th>
+          <th scope='col'>Quantidade</th>
+        </tr>
+      </thead>
+      <tbody>
+        {$content}
+      </tbody>
+    ";
+    $pdf = new Dompdf();
+    $pdf->loadHtml($html);
+    $pdf->setPaper('A4', 'portrait');
+    $pdf->render();
+    $pdf->stream();
   }
 }
