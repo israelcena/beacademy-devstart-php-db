@@ -43,7 +43,6 @@ class CategoryController extends AbsController
     $data->execute();
     parent::render('category/edit', $data->fetch(\PDO::FETCH_ASSOC));
     if ($_POST) {
-      $con = Connection::getConnetion();
       $data = $con->prepare('UPDATE tb_category SET name = :name, description = :description WHERE id = :id');
       $data->bindValue(':name', $_POST['name']);
       $data->bindValue(':description', $_POST['description']);
